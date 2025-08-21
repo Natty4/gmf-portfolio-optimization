@@ -151,9 +151,9 @@ python scripts/main.py
 
 ##  Deliverables
 
- ✔️ **Professional Investment Memo** (`artifacts/executive_summary.pdf`)
- ✔️ **Interactive Dashboard** for exploration
- ✔️ **Backtesting results** and efficient frontier charts
+ ✔️ **Professional Investment Memo** (`artifacts/executive_summary.pdf`)<br>
+ ✔️ **Interactive Dashboard** for exploration<br>
+ ✔️ **Backtesting results** and efficient frontier charts<br>
  ✔️ **Well-structured, modular codebase**
 
 ---
@@ -183,7 +183,5 @@ It is for **educational and research purposes only** and not intended as financi
 
 ---
 
-**💙 Data science (The quant team, Axe C.)**
+**💙 Data science (The quant team, Axe C.)**<br>
 *Turning machine learning research into actionable investment insights.*
-
-
