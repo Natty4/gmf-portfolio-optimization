@@ -39,7 +39,7 @@ I approached this as a **solo data science consultancy project**, building a sca
 ## 📊 Visual Results
 
 <details>
-<summary><strong>🔻 Model Performance Comparison</strong></summary>
+<summary><strong> Model Performance Comparison</strong></summary>
 
 ![Model Performance](artifacts/model_performance_comparison.png)  
 *LSTM outperformed ARIMA by 3.4% in forecasting accuracy (lower RMSE is better)*
@@ -47,7 +47,7 @@ I approached this as a **solo data science consultancy project**, building a sca
 </details>
 
 <details>
-<summary><strong>🔻 Efficient Frontier Optimization</strong></summary>
+<summary><strong> Efficient Frontier Optimization</strong></summary>
 
 ![Efficient Frontier](artifacts/efficient_frontier.png)  
 *Portfolio optimization showing Max Sharpe (red star) and Minimum Volatility (green diamond) portfolios on the Efficient Frontier*
@@ -55,7 +55,7 @@ I approached this as a **solo data science consultancy project**, building a sca
 </details>
 
 <details>
-<summary><strong>🔻 Backtest Performance</strong></summary>
+<summary><strong> Backtest Performance</strong></summary>
 
 ![Backtest Results](artifacts/backtest_comparison.png)  
 *Strategy delivered 35.2% returns vs 11.7% for 60/40 benchmark (+23.5% outperformance)*
@@ -63,7 +63,7 @@ I approached this as a **solo data science consultancy project**, building a sca
 </details>
 
 <details>
-<summary><strong>🔻 Price Forecasting</strong></summary>
+<summary><strong> Price Forecasting</strong></summary>
 
 ![TSLA Forecast](artifacts/tsla_forecast.png)  
 *12-month TSLA price forecast with 95% confidence intervals using LSTM model*
@@ -71,7 +71,7 @@ I approached this as a **solo data science consultancy project**, building a sca
 </details>
 
 <details>
-<summary><strong>🔻 Risk Analysis</strong></summary>
+<summary><strong> Risk Analysis</strong></summary>
 
 ![Risk Metrics](artifacts/risk_metrics_dashboard.png)  
 *Comprehensive risk assessment showing volatility, Sharpe ratios, Value at Risk, and maximum drawdown across all assets*
@@ -79,7 +79,7 @@ I approached this as a **solo data science consultancy project**, building a sca
 </details>
 
 <details>
-<summary><strong>🔻 Portfolio Allocations</strong></summary>
+<summary><strong> Portfolio Allocations</strong></summary>
 
 ![Portfolio Allocation](artifacts/portfolio_allocation.png)  
 *Optimized portfolio weights for different risk profiles: Aggressive Growth (left) vs Conservative (right)*

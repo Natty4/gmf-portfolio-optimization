@@ -1,0 +1,13 @@
+yfinance
+statsmodels
+pmdarima
+scikit-learn
+matplotlib
+pandas
+numpy
+tensorflow
+pypfopt
+PyPortfolioOpt==1.5.4
+plotly
+fpdf2
+seaborn
