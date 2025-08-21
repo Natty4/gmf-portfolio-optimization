@@ -1,7 +1,3 @@
-Here’s a polished **solo-data-scientist style README** that matches the tone of the enhanced investment memo we drafted. It keeps the professionalism but positions the repo as a **personal data science/analytics project** built for GMF’s challenge — not a big team.
-
----
-
 # GMF Investments Portfolio Optimization
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
@@ -96,7 +92,7 @@ I approached this as a **solo data science consultancy project**, building a sca
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### Prerequisites
 
@@ -155,10 +151,10 @@ python scripts/main.py
 
 ##  Deliverables
 
-* ✔️ **Professional Investment Memo** (`artifacts/executive_summary.pdf`)
-* ✔️ **Interactive Dashboard** for exploration
-* ✔️ **Backtesting results** and efficient frontier charts
-* ✔️ **Well-structured, modular codebase**
+ ✔️ **Professional Investment Memo** (`artifacts/executive_summary.pdf`)
+ ✔️ **Interactive Dashboard** for exploration
+ ✔️ **Backtesting results** and efficient frontier charts
+ ✔️ **Well-structured, modular codebase**
 
 ---
 
@@ -174,9 +170,9 @@ python scripts/main.py
 
 ## 📞 Contact
 
-👤 **Author**: Natnael K.
-📧 Email: [Natnael](mailto:natty7kt@gmail.com)
-😺 GitHub: [github.com/natnael](https://github.com/natty4)
+* 👤 **Author**: Natnael K.
+* 📧 Email: [Natnael](mailto:natty7kt@gmail.com)
+* 😺 GitHub: [github.com/natnael](https://github.com/natty4)
 
 ---
 
@@ -188,6 +184,6 @@ It is for **educational and research purposes only** and not intended as financi
 ---
 
 **💙 Data science (The quant team, Axe C.)**
-*Turning machine learning research into actionable investment insights.*
+* *Turning machine learning research into actionable investment insights.*
 
 
