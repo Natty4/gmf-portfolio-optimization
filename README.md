@@ -184,6 +184,6 @@ It is for **educational and research purposes only** and not intended as financi
 ---
 
 **💙 Data science (The quant team, Axe C.)**
-* *Turning machine learning research into actionable investment insights.*
+*Turning machine learning research into actionable investment insights.*
 
 
