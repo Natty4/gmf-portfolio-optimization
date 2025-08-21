@@ -1,7 +1,3 @@
-Here’s a polished **solo-data-scientist style README** that matches the tone of the enhanced investment memo we drafted. It keeps the professionalism but positions the repo as a **personal data science/analytics project** built for GMF’s challenge — not a big team.
-
----
-
 # GMF Investments Portfolio Optimization
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
