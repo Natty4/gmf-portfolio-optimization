@@ -4,7 +4,14 @@ import matplotlib.pyplot as plt
 import os
 from .utils import annualize_return, annualize_vol, sharpe_ratio
 
-def backtest(weights: dict, returns: pd.DataFrame, start: str, end: str, rebalance: str | None = None) -> pd.Series:
+
+def backtest(
+    weights: dict,
+    returns: pd.DataFrame,
+    start: str,
+    end: str,
+    rebalance: str | None = None,
+) -> pd.Series:
     """Backtest portfolio strategy and return cumulative returns."""
     weights = pd.Series(weights)
     returns = returns.loc[start:end]
@@ -24,12 +31,17 @@ def backtest(weights: dict, returns: pd.DataFrame, start: str, end: str, rebalan
             port_ret = (chunk * weights).sum(axis=1)
             growth = (1 + port_ret).prod()
             current_value *= growth
-            start_value = cum.loc[last_date] if last_date in cum.index and not np.isnan(cum.loc[last_date]) else 1.0
+            start_value = (
+                cum.loc[last_date]
+                if last_date in cum.index and not np.isnan(cum.loc[last_date])
+                else 1.0
+            )
             cum.loc[chunk.index] = np.linspace(start_value, current_value, len(chunk))
             last_date = chunk.index[-1]
         cum.ffill(inplace=True)
         cum.iloc[0] = 1.0
         return cum
+
 
 def evaluate_series(cum: pd.Series) -> dict:
     """Evaluate portfolio performance metrics."""
@@ -40,17 +52,28 @@ def evaluate_series(cum: pd.Series) -> dict:
         "total_return": float(cum.iloc[-1] - 1),
         "ann_return": float(annualize_return(m)),
         "ann_vol": float(annualize_vol(s)),
-        "sharpe": float(sharpe_ratio(m, s))
+        "sharpe": float(sharpe_ratio(m, s)),
     }
 
-def run_backtest(strategy_weights: dict, benchmark_weights: dict, returns_daily: pd.DataFrame, 
-                 bt_start: str, bt_end: str, artifacts_dir: str = "artifacts") -> tuple[dict, dict, pd.Series, pd.Series]:
+
+def run_backtest(
+    strategy_weights: dict,
+    benchmark_weights: dict,
+    returns_daily: pd.DataFrame,
+    bt_start: str,
+    bt_end: str,
+    artifacts_dir: str = "artifacts",
+) -> tuple[dict, dict, pd.Series, pd.Series]:
     """Run backtest comparison between strategy and benchmark."""
     # Strategy backtest
-    strat_cum = backtest(strategy_weights, returns_daily, bt_start, bt_end, rebalance=None)
+    strat_cum = backtest(
+        strategy_weights, returns_daily, bt_start, bt_end, rebalance=None
+    )
 
     # Benchmark backtest
-    bench_cum = backtest(benchmark_weights, returns_daily, bt_start, bt_end, rebalance=None)
+    bench_cum = backtest(
+        benchmark_weights, returns_daily, bt_start, bt_end, rebalance=None
+    )
 
     # Align indices
     idx = strat_cum.index.intersection(bench_cum.index)
@@ -74,9 +97,9 @@ def run_backtest(strategy_weights: dict, benchmark_weights: dict, returns_daily:
     bench_metrics = evaluate_series(bench_cum)
 
     # Save metrics
-    pd.DataFrame([strat_metrics, bench_metrics], index=["Strategy", "Benchmark60/40"]).to_csv(
-        os.path.join(artifacts_dir, "backtest_metrics.csv")
-    )
+    pd.DataFrame(
+        [strat_metrics, bench_metrics], index=["Strategy", "Benchmark60/40"]
+    ).to_csv(os.path.join(artifacts_dir, "backtest_metrics.csv"))
 
     # Save cumulative returns for further analysis
     strat_cum.to_csv(os.path.join(artifacts_dir, "strategy_cumulative_returns.csv"))
