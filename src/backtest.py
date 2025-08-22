@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from typing import Optional
 import os
 from .utils import annualize_return, annualize_vol, sharpe_ratio
 
@@ -10,7 +11,7 @@ def backtest(
     returns: pd.DataFrame,
     start: str,
     end: str,
-    rebalance: str | None = None,
+    rebalance: Optional[str] = None,
 ) -> pd.Series:
     """Backtest portfolio strategy and return cumulative returns."""
     weights = pd.Series(weights)
