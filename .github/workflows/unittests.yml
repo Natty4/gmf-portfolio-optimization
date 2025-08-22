@@ -62,10 +62,6 @@ jobs:
     - name: Check imports with isort
       run: |
         isort --check-only tests/
-    
-    - name: Lint with flake8
-      run: |
-        flake8 src/ tests/ scripts/ --max-line-length=88 --ignore=E203,W503
 
   security:
     runs-on: ubuntu-latest

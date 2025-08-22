@@ -1,6 +1,5 @@
 import sys
 import pathlib
-import joblib  # Using joblib since that's what you used to save models
 
 ROOT_DIR = pathlib.Path(__file__).resolve().parents[1]
 SRC_DIR = ROOT_DIR
@@ -32,16 +31,11 @@ from src.utils import (
     reconstruct_prices_from_log_returns,
     residual_bootstrap_intervals,
     annualize_return,
-    sharpe_ratio,
 )
 
 # Enhanced reporting
 from src.reporting import generate_executive_summary
-from src.visualization import (
-    create_interactive_dashboard,
-    enhanced_risk_analysis,
-    generate_all_visualizations,
-)
+
 
 # Configuration
 SEED = 42
