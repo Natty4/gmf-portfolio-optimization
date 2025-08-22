@@ -1,24 +1,30 @@
 [build-system]
-
-requires = ["setuptools>=45", "wheel"]
-
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
 
-
-[project]
-
-name = "your-project-name"
-
-version = "0.1.0"
-
-description = ""
-
-requires-python = ">=3.8"
-
-
-
-[tool.setuptools.packages.find]
-
-where = ["src"]
-
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
