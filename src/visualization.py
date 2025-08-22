@@ -1,12 +1,13 @@
-import pandas as pd
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import plotly.express as px
 import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+import seaborn as sns
 from matplotlib import gridspec
-from .utils import sharpe_ratio, historical_var
+from plotly.subplots import make_subplots
+
+from .utils import historical_var, sharpe_ratio
 
 
 def create_interactive_dashboard(adj_df, forecast_df, backtest_results, artifacts_dir):

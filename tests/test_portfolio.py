@@ -1,6 +1,7 @@
-import pytest
-import pandas as pd
 import numpy as np
+import pandas as pd
+import pytest
+
 from src.portfolio import monte_carlo_optimization, validate_expected_returns
 
 

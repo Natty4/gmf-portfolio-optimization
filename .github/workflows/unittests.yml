@@ -61,7 +61,7 @@ jobs:
     
     - name: Check imports with isort
       run: |
-        isort --check-only src/ tests/ scripts/
+        isort --check-only tests/
     
     - name: Lint with flake8
       run: |

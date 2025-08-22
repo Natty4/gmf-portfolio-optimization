@@ -1,6 +1,7 @@
-import pytest
 import numpy as np
-from src.utils import annualize_return, annualize_vol, sharpe_ratio, historical_var
+import pytest
+
+from src.utils import annualize_return, annualize_vol, historical_var, sharpe_ratio
 
 
 def test_annualize_return():

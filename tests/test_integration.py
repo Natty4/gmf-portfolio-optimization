@@ -1,8 +1,9 @@
-import pytest
-import pandas as pd
 import numpy as np
+import pandas as pd
+import pytest
+
 from src.data import compute_returns
-from src.utils import sharpe_ratio, annualize_vol
+from src.utils import annualize_vol, sharpe_ratio
 
 
 def test_integration_data_to_metrics(sample_financial_data):
