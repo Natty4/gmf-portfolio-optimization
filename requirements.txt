@@ -7,9 +7,9 @@ plotly==6.3.0
 pmdarima==2.0.4
 pyportfolioopt==1.5.4
 pytest==8.4.1
-scikit-learn==1.7.1
-scipy==1.15.3
-seaborn==0.13.2
-statsmodels==0.14.5
-tensorflow==2.20.0
-yfinance==0.2.65
+scikit-learn
+scipy
+seaborn
+statsmodels
+tensorflow
+yfinance
